@@ -11,7 +11,7 @@ pipeline {
     stage('Code Analysis') {
       steps {
         script {
-          withSonarQubeEnv('SonarQube')
+          withSonarQubeEnv('SampleSonarQubeScanner')
           {
             sh "mvn sonar:sonar -Dsonar.projectKey=Sample"
           }
